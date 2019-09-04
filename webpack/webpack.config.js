@@ -1,20 +1,20 @@
 const path = require ('path');
 
-const loaders = require("./loaders.js");
-const plugins = require("./plugins.js");
+const loaders = require('./loaders.js');
+const plugins = require('./plugins.js');
 
 
 module.exports = {
-	entry: ["./src/index.js"],
+	entry: ['./src/index.js'],
 	devServer: {
-		contentBase: './dist',
-		publicPath: '/',
 		port: 8888,
 		historyApiFallback: true,
 		watchContentBase: true,
 		watchOptions: {
 			poll: true
 		},
+		contentBase: './dist',
+		publicPath: '/',
 	},
 	module: {
 		rules: [
@@ -29,11 +29,10 @@ module.exports = {
 		extensions: ['.js', '.jsx']
 	},
 	output: {
+		path: path.resolve(__dirname, '../dist'),
+		filename: 'js/[name].bundle.js',
 		publicPath: '/',
-		path: path.resolve(__dirname, "..", "dist"),
-		filename: "js/[name].bundle.js"
 	},
-	// Подключаем плагины в конфигурацию
 	plugins: [
 		plugins.CleanWebpackPlugin,
 		plugins.MiniCssExtractPlugin,

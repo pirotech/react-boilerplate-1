@@ -1,9 +1,9 @@
 .label {
-	font-family: 'Roboto';
+	font-family: 'Roboto', sans-serif;
 	font-weight: 500;
 	font-size: 13px;
 	line-height: 16px;
-	color: $color-gray-4;
+	//color: $color-gray-4;
 	&_is-required:after {
 		content: ' *';
 	}
@@ -12,7 +12,7 @@ input {
 	padding: $x2 $x2;
 	min-width: $grid-c * 3 + $grid-s * 2;
 
-	font-family: 'Roboto';
+	font-family: 'Roboto', sans-serif;
 	font-weight: 500;
 	font-size: 14px;
 	color: $color-black;
@@ -28,22 +28,22 @@ input {
 		opacity: 0.3;
 	}
 	&:hover {
-		border-color: $color-gray-3;
+		//border-color: $color-gray-3;
 	}
 	&:focus {
 		border-color: $color-blue-1;
 	}
 }
 .placeholder {
-	font-family: 'Roboto';
+	font-family: 'Roboto', sans-serif;
 	font-weight: 500;
 	font-size: 14px;
-	color: $color-gray-3;
+	//color: $color-gray-3;
 }
 .caption {
-	font-family: 'Roboto';
+	font-family: 'Roboto', sans-serif;
 	font-weight: 500;
 	font-size: 12px;
 	line-height: 15px;
-	color: $color-gray-4;
+	//color: $color-gray-4;
 }
